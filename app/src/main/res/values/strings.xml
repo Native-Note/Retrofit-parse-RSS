@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Retrofit parse RSS</string>
+    <string name="data_unavailable">Content Unavailable!\nClick Sync to load data</string>
+</resources>
