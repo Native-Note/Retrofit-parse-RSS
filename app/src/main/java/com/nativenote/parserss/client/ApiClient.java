@@ -68,23 +68,17 @@ public class ApiClient {
 //                .addInterceptor(new LogJsonInterceptor())
 //                .addInterceptor(getLogging())
 //                .addInterceptor(new LoggingInterceptor())
+//                .addInterceptor(new Interceptor() {
+//                    @Override
+//                    public Response intercept(Chain chain) throws IOException {
+//                        Request request = chain.request().newBuilder()
+//                                .addHeader("SOME-KEY", "KEY-VALUE")
+//                                .build();
+//
+//                        return chain.proceed(request);
+//                    }
+//                })
                 .build();
-
-//        OkHttpClient client = new OkHttpClient();
-//        client.connectTimeout(CONNECTION_TIME_OUT, TimeUnit.MINUTES);
-//        client.setReadTimeout(CONNECTION_TIME_OUT, TimeUnit.MINUTES);
-//        client.interceptors().add(getLogging());
-//        client.interceptors().add(new LoggingInterceptor());
-//        client.interceptors().add(new Interceptor() {
-//            @Override
-//            public Response intercept(Chain chain) throws IOException {
-//                Request newRequest = chain.request().newBuilder()
-//                        .addHeader("X-LYOMATON-KEY", StaticData.getToken())
-//                        .build();
-//                return chain.proceed(newRequest);
-//            }
-//        });
-//        return client;
     }
 
     public static OkHttpClient trustCert(Context context){
